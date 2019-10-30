@@ -59,8 +59,8 @@
     var alert = global.document.getElementById('alert-no-date');
     var submitBtn = global.document.getElementById('submitBtn');
     var result = global.document.getElementById('result');
-    var activePeriodClasses = ['bg-green-700', 'hover:bg-green-600'];
-    var inactivePeriodClasses = ['bg-xmas', 'hover:bg-green-900'];
+    var activePeriodClasses = ['border-green-400', 'hover:bg-green-600'];
+    var inactivePeriodClasses = ['border-xmas', 'hover:bg-green-900'];
 
     function onSubmit(e) {
       var salary = salaryField.value;
@@ -97,15 +97,14 @@
       var periodo = periodField.value;
 
       periodField.forEach(function eachPeriodField(field) {
-        iterateClassList(activePeriodClasses, field.parentElement, 'remove');
-        iterateClassList(inactivePeriodClasses, field.parentElement, 'remove');
+        if (periodo === field.value) {
+          iterateClassList(activePeriodClasses, field.parentElement, 'add');
+          iterateClassList(inactivePeriodClasses, field.parentElement, 'remove');
+        } else {
+          iterateClassList(activePeriodClasses, field.parentElement, 'remove');
+          iterateClassList(inactivePeriodClasses, field.parentElement, 'add');
+        }
       });
-
-      iterateClassList(
-        activePeriodClasses,
-        periodField[periodo === 'mensual' ? 0 : 1].parentElement,
-        'add',
-      );
     }
 
     dateField.max = now.toISOString().split('T')[0];

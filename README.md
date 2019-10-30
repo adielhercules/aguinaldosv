@@ -1,5 +1,5 @@
 # Calculadora Aguinaldo(SV)
-Calculadora de Aguinaldo basada en las leyes de **El Salvador**  de codigo fuente abierto (puedes colaborar para mejorarla). Esta hecha con tailwindcss para la parte visual y vanilla js (nada de ecmascript ni dependencias) del lado lógico.
+Calculadora de Aguinaldo basada en las leyes de **El Salvador**  de codigo fuente abierto (puedes colaborar para mejorarla).
 
 ## Librerias utilizadas:
 * Tailwindcss - https://github.com/tailwindcss/tailwindcss
