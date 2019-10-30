@@ -6,7 +6,8 @@
   "scripts": {
     "start": "echo 'just open the public folder!'",
     "dev": "npx serve public",
-    "build": "npm run build:css",
+    "build:dev": "npm run build:css",
+    "build": "NODE_ENV=production npm run build:css",
     "build:css": "postcss src/stylesheets/style.css -o public/assets/style/style.css"
   },
   "keywords": [],
