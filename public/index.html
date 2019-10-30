@@ -173,7 +173,7 @@
                     id="salary"
                     name="salary"
                     type="number"
-                    class="appearance-none bg-transparent border-orange-200 border-solid border-b focus:outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2"
+                    class="appearance-none bg-transparent border-orange-200 border-solid border-b outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400"
                     placeholder="$"
                     min="0"
                     tabindex="1"
@@ -187,7 +187,7 @@
                     id="date"
                     name="date"
                     type="date"
-                    class="appearance-none bg-transparent border-orange-200 border-solid border-b focus:outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2"
+                    class="appearance-none bg-transparent border-orange-200 border-solid border-b outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400"
                     tabindex="1"
                 />
               </label>
@@ -203,19 +203,19 @@
               <div class="flex">
                 <div class="w-1/2 pr-4">
                   <label
-                      class="bg-green-700 text-orange-200 py-3 px-4 font-light block w-full cursor-pointer border-green-700 border-2 border-solid outline-none hover:bg-green-600 hover:border-green-400 focus:border-green-400"
+                      class="text-orange-200 py-3 px-4 font-light block w-full cursor-pointer border-2 border-solid outline-none hover:border-green-400 border-xmas focus:border-green-400"
                       tabindex="1"
                   >
-                    <input type="radio" name="periodo" id="periodo_mensual" class="absolute opacity-0" checked/>
+                    <input type="radio" name="periodo" id="periodo_mensual" class="absolute opacity-0" value="mensual" checked/>
                     Mensual
                   </label>
                 </div>
                 <div class="w-1/2 pr-4">
                   <label
-                      class="bg-transparent hover:bg-green-900 text-orange-200 font-light py-3 px-4 block w-full cursor-pointer"
+                      class="text-orange-200 py-3 px-4 font-light block w-full cursor-pointer border-2 border-solid outline-none hover:border-green-400 border-xmas focus:border-green-400"
                       tabindex="1"
                   >
-                    <input type="radio" name="periodo" id="periodo_quincenal" class="absolute opacity-0"/>
+                    <input type="radio" name="periodo" id="periodo_quincenal" class="absolute opacity-0" value="quincenal"/>
                     Quincenal
                   </label>
                 </div>
@@ -277,7 +277,7 @@
               fill="#2F855A" transform="matrix(0.5,0,0,0.5,66.5,0)" style=""/>
         </svg>
 
-        <div class="bg-white h-auto mb-12 p-12 text-center relative shadow-lg py-24 self-end w-full">
+        <div class="bg-white h-auto mb-12 py-12 px-4 text-center relative shadow-lg py-24 self-end w-full">
           <h2 class="text-black font-medium text-xl mb-4">
             Tu &quot;Aguinaldo&quot; será de
           </h2>
