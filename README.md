@@ -7,9 +7,14 @@ Calculadora de Aguinaldo basada en las leyes de **El Salvador**  de codigo fuent
 * Snowflake - https://github.com/pajasevi/CSSnowflakes
 * element.classList polyfill - https://vanillajstoolkit.com/polyfills/classlist/
 * animate.css - https://github.com/daneden/animate.css
+* Código formateado con eslint - https://github.com/eslint/eslint
+* Intl polyfill - https://github.com/andyearnshaw/Intl.js/
+
+## Otros elementos utilizados
+* íconos de alta calidad en formato SVG - https://undraw.co/search
 
 ## Diseño
-El diseño esta inspirado en [este dribble shot](https://dribbble.com/shots/6635872-Loan-Calculator) por by [Vladimir Gruev](https://dribbble.com/gruev) y ha sido implementado únicamente con tailwindcss, a excepcion de [algunas personalizaciones](/tailwind.config.js) 
+El diseño esta inspirado en [este dribble shot](https://dribbble.com/shots/6635872-Loan-Calculator) por [Vladimir Gruev](https://dribbble.com/gruev) y ha sido implementado únicamente con tailwindcss, a excepcion de [algunas personalizaciones](/tailwind.config.js) 
 
 ## Guias
 Antes que nada debes instalar las dependencias corriendo el comando `yarn` o `npm install`

@@ -1,9 +1,9 @@
 module.exports = {
   plugins: [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-    require('cssnano')({
+    require('postcss-import'), // eslint-disable-line
+    require('tailwindcss'), // eslint-disable-line
+    require('autoprefixer'), // eslint-disable-line
+    require('cssnano')({ // eslint-disable-line
       preset: 'default',
     }),
   ],
