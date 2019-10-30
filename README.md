@@ -1,6 +1,8 @@
 # Calculadora Aguinaldo(SV)
 Calculadora de Aguinaldo basada en las leyes de **El Salvador**  de codigo fuente abierto (puedes colaborar para mejorarla).
 
+<a href="https://www.buymeacoffee.com/adielhercules" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
 ## Librerias utilizadas:
 * Tailwindcss - https://github.com/tailwindcss/tailwindcss
 * PostCSS CLI - https://github.com/postcss/postcss-cli
