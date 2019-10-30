@@ -61,6 +61,7 @@ function initialize() {
   const alert = document.getElementById('alert-no-date');
   const submitBtn = document.getElementById('submitBtn');
   const result = document.getElementById('result');
+  const snowflakes = document.getElementById('snowflakes');
   const activePeriodClasses = ['border-green-400', 'hover:bg-green-600'];
   const inactivePeriodClasses = ['border-xmas', 'hover:bg-green-900'];
 
@@ -87,6 +88,8 @@ function initialize() {
       dateField.focus();
       return;
     }
+
+    snowflakes.classList.remove('hidden');
 
     result.innerHTML = aguinaldo.replace(/\$/g, '');
   }
