@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es" class="flex h-full w-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aguinaldo(SV)</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <!--  <link rel="manifest" href="site.webmanifest">-->
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#2a583d">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+  <link href="assets/style/style.css" rel="stylesheet">
+  <script src="assets/scripts/polyfills/classList.polyfill.js" defer></script>
+  <script src="assets/scripts/main.js" defer></script>
+  <!-- Layout/Design inspired by https://dribbble.com/shots/6635872-Loan-Calculator -->
+</head>
+<body class="flex h-full w-full bg-xmas">
+<div class="text-center lg:px-4 fixed w-full py-4 hidden animated shake" id="alert-no-date">
+  <div
+      class="p-2 px-4 bg-orange-600 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex shadow-lg"
+      role="alert">
+    <span
+        class="font-normal mr-2 text-left flex-auto">Es necesario que indiques tu salario y tu fecha de contratación!</span>
+  </div>
+</div>
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+</div>
+<div class="app container mx-auto px-4 max-w-5xl min-982">
+  <div class="flex w-full h-full">
+    <div class="flex my-auto align-middle w-full py-8 relative px-8">
+      <svg height="376" version="1.1" width="267" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 376"
+           class="tree-1">
+        <defs>
+          <mask id="maskSk21f24fu6">
+            <path
+                d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+                style="" fill="#22543d"
+                transform="matrix(0.9976,0.0698,-0.0698,0.9976,9.6195,-108.9694)"/>
+          </mask>
+          <mask id="maskSk21f24fua">
+            <path
+                d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+                fill="#2F855A" transform="matrix(0.9976,0.0698,-0.0698,0.9976,9.6195,-173.9694)"
+                style=""/>
+          </mask>
+        </defs>
+        <rect x="113" y="335" width="40" height="40" rx="10" ry="10" style="" fill="#EB3D08"/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            style="" fill="#2F855A" transform="matrix(1,0,0,1,0,80)"/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#22543d" transform="matrix(1,0,0,1,0,80)" mask="url('#maskSk21f24fu6')" style=""/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#2F855A" transform="matrix(0.75,0,0,0.75,33.75,30)" style=""/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#22543d" transform="matrix(1,0,0,1,0,40)" mask="url('#maskSk21f24fua')" style=""/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#2F855A" transform="matrix(0.5,0,0,0.5,66.5,0)" style=""/>
+      </svg>
+
+      <svg height="376" version="1.1" width="267" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 376"
+           class="tree-2 z-10">
+        <defs>
+          <mask id="maskSk21f24fu6">
+            <path
+                d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+                style="" fill="#22543d"
+                transform="matrix(0.9976,0.0698,-0.0698,0.9976,9.6195,-108.9694)"/>
+          </mask>
+          <mask id="maskSk21f24fua">
+            <path
+                d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+                fill="#2F855A" transform="matrix(0.9976,0.0698,-0.0698,0.9976,9.6195,-173.9694)"
+                style=""/>
+          </mask>
+        </defs>
+        <rect x="113" y="335" width="40" height="40" rx="10" ry="10" style="" fill="#EB3D08"/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            style="" fill="#2F855A" transform="matrix(1,0,0,1,0,80)"/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#22543d" transform="matrix(1,0,0,1,0,80)" mask="url('#maskSk21f24fu6')" style=""/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#2F855A" transform="matrix(0.75,0,0,0.75,33.75,30)" style=""/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#22543d" transform="matrix(1,0,0,1,0,40)" mask="url('#maskSk21f24fua')" style=""/>
+        <path
+            d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+            fill="#2F855A" transform="matrix(0.5,0,0,0.5,66.5,0)" style=""/>
+      </svg>
+
+      <div class="w-3/5 pr-12">
+        <h1 class="text-5xl text-orange-200 font-medium font-roboto mb-8 leading-tight">
+          Calculadora Aguinaldo(SV)
+        </h1>
+        <p class="text-lg text-orange-200 font-roboto font-light">
+          Calcula cual será tu próximo Aguinaldo.
+        </p>
+
+        <form name="calculateAguinaldo" id="calculateAguinaldo" class="flex my-16">
+          <div class="w-1/2 pr-8">
+            <div class="mb-8">
+              <label for="salary" class="font-light text-orange-200 block">
+                Salario (USD)
+                <input
+                    id="salary"
+                    name="salary"
+                    type="number"
+                    class="appearance-none bg-transparent border-orange-200 border-solid border-b focus:outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2"
+                    placeholder="$"
+                    min="0"
+                    tabindex="1"
+                />
+              </label>
+            </div>
+            <div class="mb-0">
+              <label for="date" class="font-light text-orange-200 block">
+                Tiempo en la empresa
+                <input
+                    id="date"
+                    name="date"
+                    type="date"
+                    class="appearance-none bg-transparent border-orange-200 border-solid border-b focus:outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2"
+                    tabindex="1"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="w-1/2 pr-8 h-auto">
+            <div class="mb-8">
+              <label class="font-light text-orange-200 block mb-2">
+                Período
+              </label>
+
+              <div class="flex">
+                <div class="w-1/2 pr-4">
+                  <label
+                      class="bg-green-700 text-orange-200 py-3 px-4 font-light block w-full cursor-pointer border-green-700 border-2 border-solid outline-none hover:bg-green-600 hover:border-green-400 focus:border-green-400"
+                      tabindex="1"
+                  >
+                    <input type="radio" name="periodo" id="periodo_mensual" class="absolute opacity-0" checked/>
+                    Mensual
+                  </label>
+                </div>
+                <div class="w-1/2 pr-4">
+                  <label
+                      class="bg-transparent hover:bg-green-900 text-orange-200 font-light py-3 px-4 block w-full cursor-pointer"
+                      tabindex="1"
+                  >
+                    <input type="radio" name="periodo" id="periodo_quincenal" class="absolute opacity-0"/>
+                    Quincenal
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-0">
+              <label class="font-light text-orange-200 block mb">
+                &nbsp;
+              </label>
+
+              <div class="flex">
+                <div class="w-full">
+                  <button
+                      id="submitBtn"
+                      class="bg-orange-500 hover:bg-orange-400 text-orange-200 font-light py-4 px-4 block w-full"
+                  >
+                    Calcular Aguinaldo
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="w-2/5 relative content-end flex">
+        <svg height="376" version="1.1" width="267" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 376"
+             class="tree-3 z-10">
+          <defs>
+            <mask id="maskSk21f24fu6">
+              <path
+                  d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+                  style="" fill="#22543d"
+                  transform="matrix(0.9976,0.0698,-0.0698,0.9976,9.6195,-108.9694)"/>
+            </mask>
+            <mask id="maskSk21f24fua">
+              <path
+                  d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+                  fill="#2F855A" transform="matrix(0.9976,0.0698,-0.0698,0.9976,9.6195,-173.9694)"
+                  style=""/>
+            </mask>
+          </defs>
+          <rect x="113" y="335" width="40" height="40" rx="10" ry="10" style="" fill="#EB3D08"/>
+          <path
+              d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+              style="" fill="#2F855A" transform="matrix(1,0,0,1,0,80)"/>
+          <path
+              d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+              fill="#22543d" transform="matrix(1,0,0,1,0,80)" mask="url('#maskSk21f24fu6')" style=""/>
+          <path
+              d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+              fill="#2F855A" transform="matrix(0.75,0,0,0.75,33.75,30)" style=""/>
+          <path
+              d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+              fill="#22543d" transform="matrix(1,0,0,1,0,40)" mask="url('#maskSk21f24fua')" style=""/>
+          <path
+              d="M119.869,8.275c2.536,-5.071 7.719,-8.275 13.389,-8.275c5.67,0 10.854,3.204 13.39,8.275c28.053,56.107 92.525,185.051 118.235,236.472c2.33,4.658 2.081,10.191 -0.658,14.622c-2.738,4.43 -7.575,7.127 -12.784,7.127c-53.869,0 -182.731,0 -236.487,0c-5.183,0 -9.996,-2.683 -12.721,-7.092c-2.724,-4.408 -2.972,-9.913 -0.654,-14.549c25.674,-51.347 90.216,-180.433 118.29,-236.58Z"
+              fill="#2F855A" transform="matrix(0.5,0,0,0.5,66.5,0)" style=""/>
+        </svg>
+
+        <div class="bg-white h-auto mb-12 p-12 text-center relative shadow-lg py-24 self-end w-full">
+          <h2 class="text-black font-medium text-xl mb-4">
+            Tu &quot;Aguinaldo&quot; será de
+          </h2>
+          <h1 class="text-black font-medium">
+            <small class="text-4xl align-top">$</small>&nbsp;
+            <span class="text-6xl align-middle leading-tight" id="result">
+                0.00
+              </span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
