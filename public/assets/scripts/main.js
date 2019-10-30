@@ -109,6 +109,7 @@
 
     dateField.max = now.toISOString().split('T')[0];
     iterateClassList(activePeriodClasses, periodField[0].parentElement, 'add');
+    iterateClassList(inactivePeriodClasses, periodField[0].parentElement, 'remove');
     iterateClassList(inactivePeriodClasses, periodField[1].parentElement, 'add');
 
     form.addEventListener('submit', onSubmit);
