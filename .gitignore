@@ -88,5 +88,8 @@ typings/
 .dynamodb/
 
 .idea
+public/bundle.css
+public/bundle.js
+public/bundle.js.map
 
 # End of https://www.gitignore.io/api/node
