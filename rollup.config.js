@@ -2,7 +2,6 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
-import babel from 'rollup-plugin-babel';
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
   // Specify the paths to all of the template files in your project
@@ -26,10 +25,6 @@ export default {
   plugins: [
     resolve(), // tells Rollup how to find date-fns in node_modules
     commonjs(), // converts date-fns to ES modules
-    babel({
-      babelrc: false,
-      presets: [['@babel/preset-env', { modules: false }]],
-    }),
     postcss({
       extract: true,
       plugins: [
