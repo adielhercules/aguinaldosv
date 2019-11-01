@@ -77,6 +77,6 @@ export default class Calculator {
   }
 
   static moreThanAYear(time) {
-    return time > 1;
+    return time > 12;
   }
 }

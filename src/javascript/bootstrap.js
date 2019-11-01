@@ -58,10 +58,12 @@ function initialize() {
 
     snowflakes.classList.remove('hidden');
 
-    const time =
-      Number(timeOfEmployment) * (timeOfEmploymentUnit === TIME_OF_EMPLOYMENT_MONTHS ? 1 : 2);
+    const timeOfEmploymentMultiplier = timeOfEmploymentUnit === TIME_OF_EMPLOYMENT_MONTHS ? 1 : 12;
+    const timeOfEmploymentAsNumber = Number(timeOfEmployment);
+    const salaryAsNumber = Number(salary);
+    const time = timeOfEmploymentAsNumber * timeOfEmploymentMultiplier;
     const { total: aguinaldo, taxes: totalTaxes } = Calculator.calculateAsFixed({
-      salary,
+      salary: salaryAsNumber,
       time,
       period,
     });
