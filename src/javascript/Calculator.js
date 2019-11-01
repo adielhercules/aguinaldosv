@@ -20,7 +20,7 @@ export default class Calculator {
     let bonus = 0.0;
 
     if (this.moreThanAYear(time)) {
-      bonus = BonusUtils.getBonusPerMonth(salary, time);
+      bonus = BonusUtils.getBonusPerMonth(salary, time / 12);
     } else {
       bonus = BonusUtils.getPartialBonusPerMonth(salary, time);
     }
