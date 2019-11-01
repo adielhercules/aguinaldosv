@@ -45,7 +45,7 @@
       class="p-2 px-4 bg-orange-600 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex shadow-lg"
       role="alert">
     <span
-        class="font-normal mr-2 text-left flex-auto">¡Es necesario que indiques tu salario y tu fecha de contratación!</span>
+        class="font-normal mr-2 text-left flex-auto">¡Es necesario que indiques tu salario y el tiempo que tenés en la empresa!</span>
   </div>
 </div>
 <div class="snowflakes hidden" aria-hidden="true" id="snowflakes">
@@ -165,77 +165,75 @@
           Calcula cual será tu próximo Aguinaldo.
         </p>
 
-        <form name="calculateAguinaldo" id="calculateAguinaldo" class="flex my-16">
-          <div class="w-1/2 pr-8">
-            <div class="mb-8">
-              <label for="salary" class="font-light text-orange-200 block">
-                Salario (USD)
-                <input
-                    id="salary"
-                    name="salary"
-                    type="number"
-                    class="appearance-none bg-transparent border-orange-200 border-solid border-b outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400"
-                    placeholder="$"
-                    min="0"
-                />
-              </label>
+        <form name="calculateAguinaldo" id="calculateAguinaldo">
+          <div class="flex my-16 mb-8">
+            <div class="w-1/2 pr-8">
+              <div class="mb-8">
+                <label for="salary" class="font-light text-orange-200 block">
+                  Salario (USD)
+                  <input
+                      id="salary"
+                      name="salary"
+                      type="number"
+                      class="appearance-none bg-transparent border-orange-200 border-solid border-b-2 outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400 rounded-none"
+                      placeholder="$"
+                      min="0"
+                  />
+                </label>
+              </div>
+              <div class="mb-0">
+                <label for="timeOfEmployment" class="font-light text-orange-200 block">
+                  Tiempo en la empresa
+                  <input
+                      id="timeOfEmployment"
+                      name="timeOfEmployment"
+                      type="number"
+                      min="1"
+                      class="appearance-none bg-transparent border-orange-200 border-solid border-b-2 outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400 rounded-none"
+                  />
+                </label>
+              </div>
             </div>
-            <div class="mb-0">
-              <label for="date" class="font-light text-orange-200 block">
-                Fecha de contratación en la empresa
-                <input
-                    id="date"
-                    name="date"
-                    type="date"
-                    class="appearance-none bg-transparent border-orange-200 border-solid border-b outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400"
-                />
-              </label>
+
+            <div class="w-1/2 pr-8 h-auto">
+              <div class="mb-6">
+                <label class="font-light text-orange-200 block">
+                  Período
+                </label>
+
+                <select
+                    aria-label="Período"
+                    class="block appearance-none w-full bg-transparent border-orange-200 border-solid border-b-2 outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400 rounded-none"
+                    id="period" name="period">
+                  <option value="fixed-salary-monthly" selected>Mensual</option>
+                  <option value="fixed-salary-biweekly">Quincenal</option>
+                </select>
+              </div>
+
+              <div class="mb-0">
+                <label class="font-light text-orange-200 block mb-2">
+                  &nbsp;
+                </label>
+
+                <select
+                    aria-label="Unidad"
+                    class="block appearance-none w-full bg-transparent border-orange-200 border-solid border-b-2 outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400 rounded-none"
+                    id="timeOfEmploymentUnit" name="timeOfEmploymentUnit">
+                  <option value="years">Años</option>
+                  <option value="months">Meses</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <div class="w-1/2 pr-8 h-auto">
-            <div class="mb-6">
-              <label class="font-light text-orange-200 block mb-2">
-                Período
-              </label>
-
-              <div class="flex">
-                <div class="w-1/2 pr-4">
-                  <label
-                      class="text-orange-100 py-3 px-4 font-normal block w-full cursor-pointer border-2 border-solid outline-none hover:border-green-400 focus:border-green-400 border-xmas"
-                  >
-                    <input type="radio" name="periodo" id="periodo_mensual" class="absolute opacity-0" value="mensual"
-                           checked/>
-                    Mensual
-                  </label>
-                </div>
-                <div class="w-1/2 pr-4">
-                  <label
-                      class="text-orange-100 py-3 px-4 font-normal block w-full cursor-pointer border-2 border-solid outline-none hover:border-green-400 focus:border-green-400 border-xmas"
-                  >
-                    <input type="radio" name="periodo" id="periodo_quincenal" class="absolute opacity-0"
-                           value="quincenal"/>
-                    Quincenal
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <div class="mb-0">
-              <label class="font-light text-orange-200 block mb">
-                &nbsp;
-              </label>
-
-              <div class="flex">
-                <div class="w-full">
-                  <button
-                      id="submitBtn"
-                      class="bg-orange-700 hover:bg-orange-500 text-white hover:text-orange-200 font-normal py-4 px-4 block w-full"
-                  >
-                    Calcular Aguinaldo
-                  </button>
-                </div>
-              </div>
+          <div class="flex mb-8">
+            <div class="w-full pr-8">
+              <button
+                  id="submitBtn"
+                  class="bg-orange-700 hover:bg-orange-500 text-white hover:text-orange-200 font-normal py-4 px-4 block w-full"
+              >
+                Calcular Aguinaldo
+              </button>
             </div>
           </div>
         </form>
@@ -276,16 +274,25 @@
               fill="#2F855A" transform="matrix(0.5,0,0,0.5,66.5,0)" style=""/>
         </svg>
 
-        <div class="bg-white h-auto mb-12 py-12 px-4 text-center relative shadow-lg py-24 self-end w-full">
-          <h2 class="text-black font-medium text-xl mb-4">
+        <div class="bg-white h-auto mb-10 text-center relative shadow-lg pt-24 pb-8 self-end w-full"
+             id="results-container">
+          <h2 class="text-black font-medium text-xl mb-4 px-6">
             Tu &quot;Aguinaldo&quot; será de
           </h2>
-          <h1 class="text-black font-medium">
+          <h1 class="text-black font-medium px-4 mb-6">
             <small class="text-4xl align-top">$</small>&nbsp;
             <span class="text-6xl align-middle leading-tight" id="result">
                 0.00
               </span>
           </h1>
+
+          <div class="border-b border-solid border-gray-200 mx-auto w-1/2 px-4 mb-6"></div>
+          <div class="flex px-8 my-6">
+            <div class="w-full">
+              <h2 class="text-gray-700 font-normal text-md">Descuentos aplicados: <span class="text-black font-medium"
+                                                                                        id="taxes">$0.0</span></h2>
+            </div>
+          </div>
         </div>
       </div>
     </main>
