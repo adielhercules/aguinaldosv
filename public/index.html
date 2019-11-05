@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" class="flex h-full w-full">
+<html lang="es" class="flex min-h-full w-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -39,8 +39,8 @@
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en" defer></script>
   <script src="bundle.js" defer></script>
 </head>
-<body class="flex h-full w-full bg-xmas">
-<div class="text-center lg:px-4 fixed w-full py-4 hidden animated shake" id="alert-no-date">
+<body class="flex min-h-full w-full bg-xmas">
+<div class="text-center lg:px-4 fixed w-full py-0 hidden animated shake z-10 lg:py-4" id="alert-no-date">
   <div
       class="p-2 px-4 bg-orange-600 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex shadow-lg"
       role="alert">
@@ -48,47 +48,14 @@
         class="font-normal mr-2 text-left flex-auto">¡Es necesario que indiques tu salario y el tiempo que tenés en la empresa!</span>
   </div>
 </div>
-<div class="snowflakes hidden" aria-hidden="true" id="snowflakes">
+<div class="snowflakes invisible" aria-hidden="true" id="snowflakes">
   <div class="snowflake">
     ❅
-  </div>
-  <div class="snowflake">
-    ❆
-  </div>
-  <div class="snowflake">
-    ❅
-  </div>
-  <div class="snowflake">
-    ❆
-  </div>
-  <div class="snowflake">
-    ❅
-  </div>
-  <div class="snowflake">
-    ❆
-  </div>
-  <div class="snowflake">
-    ❅
-  </div>
-  <div class="snowflake">
-    ❆
-  </div>
-  <div class="snowflake">
-    ❅
-  </div>
-  <div class="snowflake">
-    ❆
-  </div>
-  <div class="snowflake">
-    ❅
-  </div>
-  <div class="snowflake">
-    ❆
   </div>
 </div>
-<div class="app container mx-auto px-4 max-w-5xl min-982">
-  <div class="flex w-full h-full">
-    <main class="flex my-auto align-middle w-full py-8 relative px-8">
+<div class="app container px-0 sm:px-4 max-w-5xl">
+  <div class="flex w-full min-h-full">
+    <main class="flex my-auto align-middle w-full py-8 pt-12 relative px-8 flex-wrap">
       <svg height="376" version="1.1" width="267" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 376"
            class="tree-1">
         <defs>
@@ -157,8 +124,8 @@
             fill="#2F855A" transform="matrix(0.5,0,0,0.5,66.5,0)" style=""/>
       </svg>
 
-      <div class="w-3/5 pr-12">
-        <h1 class="text-5xl text-orange-200 font-medium font-roboto mb-8 leading-tight">
+      <div class="pr-0 w-full sm:w-4/5 md:w-4/5 lg:w-3/5 xl:w-3/5 md:pr-12 lg:pr-12 xl:pr-12">
+        <h1 class="text-3xl sm:text-5xl text-orange-200 font-medium font-roboto mb-2 sm:mb-6 leading-tight">
           Calculadora Aguinaldo(SV)
         </h1>
         <p class="text-lg text-orange-200 font-roboto font-light">
@@ -166,8 +133,8 @@
         </p>
 
         <form name="calculateAguinaldo" id="calculateAguinaldo">
-          <div class="flex my-16 mb-8">
-            <div class="w-1/2 pr-8">
+          <div class="flex my-8 sm:my16 mb-8 flex-wrap">
+            <div class="pr-0 w-full sm:w-1/2 sm:pr-8">
               <div class="mb-8">
                 <label for="salary" class="font-light text-orange-200 block">
                   Salario (USD)
@@ -181,7 +148,26 @@
                   />
                 </label>
               </div>
-              <div class="mb-0">
+            </div>
+
+            <div class="pr-0 h-auto sm:pr-8 w-full sm:w-1/2">
+              <div class="mb-8">
+                <label class="font-light text-orange-200 block">
+                  Período
+                </label>
+
+                <select
+                    aria-label="Período"
+                    class="block appearance-none w-full bg-transparent border-orange-200 border-solid border-b-2 outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400 rounded-none"
+                    id="period" name="period">
+                  <option value="fixed-salary-monthly" selected>Mensual</option>
+                  <option value="fixed-salary-biweekly">Quincenal</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pr-0 w-full sm:w-1/2 sm:pr-8">
+              <div class="mb-8 sm:mb-0">
                 <label for="timeOfEmployment" class="font-light text-orange-200 block">
                   Tiempo en la empresa
                   <input
@@ -195,24 +181,13 @@
               </div>
             </div>
 
-            <div class="w-1/2 pr-8 h-auto">
-              <div class="mb-6">
-                <label class="font-light text-orange-200 block">
-                  Período
-                </label>
-
-                <select
-                    aria-label="Período"
-                    class="block appearance-none w-full bg-transparent border-orange-200 border-solid border-b-2 outline-none text-orange-200 placeholder-orange-200 text-3xl inline-block w-full mt-2 focus:border-green-400 rounded-none"
-                    id="period" name="period">
-                  <option value="fixed-salary-monthly" selected>Mensual</option>
-                  <option value="fixed-salary-biweekly">Quincenal</option>
-                </select>
-              </div>
-
+            <div class="pr-0 h-auto sm:pr-8 w-full sm:w-1/2">
               <div class="mb-0">
-                <label class="font-light text-orange-200 block mb-2">
+                <label class="font-light text-orange-200 hidden sm:block">
                   &nbsp;
+                </label>
+                <label class="font-light text-orange-200 block sm:hidden">
+                  Unidad
                 </label>
 
                 <select
@@ -227,10 +202,10 @@
           </div>
 
           <div class="flex mb-8">
-            <div class="w-full pr-8">
+            <div class="w-full pr-0 sm:pr-8">
               <button
                   id="submitBtn"
-                  class="bg-orange-700 hover:bg-orange-500 text-white hover:text-orange-200 font-normal py-4 px-4 block w-full"
+                  class="bg-orange-700 hover:bg-orange-500 text-white hover:text-orange-200 py-4 px-4 block w-full text-2xl sm:text-base font-normal"
               >
                 Calcular Aguinaldo
               </button>
@@ -239,7 +214,7 @@
         </form>
       </div>
 
-      <div class="w-2/5 relative content-end flex">
+      <div class="relative content-end flex w-full lg:w-2/5 xl:w-2/5 my-12 sm:mt-0">
         <svg height="376" version="1.1" width="267" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 376"
              class="tree-3 z-10">
           <defs>
@@ -274,23 +249,24 @@
               fill="#2F855A" transform="matrix(0.5,0,0,0.5,66.5,0)" style=""/>
         </svg>
 
-        <div class="bg-white h-auto mb-10 text-center relative shadow-lg pt-24 pb-8 self-end w-full"
+        <div class="bg-white h-auto text-center relative shadow-lg pt-6 sm:pt-24 pb-8 self-end w-full mb-24 sm:mb-10"
              id="results-container">
-          <h2 class="text-black font-medium text-xl mb-4 px-6">
+          <h2 class="text-black font-medium text-base sm:text-xl mb-2 sm:mb-4 px-6">
             Tu &quot;Aguinaldo&quot; será de
           </h2>
-          <h1 class="text-black font-medium px-4 mb-6">
-            <small class="text-4xl align-top">$</small>&nbsp;
-            <span class="text-6xl align-middle leading-tight" id="result">
+          <h1 class="text-black font-medium px-4 mb-2 sm:mb-6">
+            <small class="text-2xl sm:text-4xl align-top">$</small>&nbsp;
+            <span class="text-4xl sm:text-6xl align-middle leading-tight" id="result">
                 0.00
               </span>
           </h1>
 
           <div class="border-b border-solid border-gray-200 mx-auto w-1/2 px-4 mb-6"></div>
-          <div class="flex px-8 my-6">
+          <div class="flex px-6 sm:px-8 my-2 sm:my-6">
             <div class="w-full">
-              <h2 class="text-gray-700 font-normal text-md">Descuentos aplicados: <span class="text-black font-medium"
-                                                                                        id="taxes">$0.0</span></h2>
+              <h2 class="text-gray-700 font-normal text-md">Descuentos aplicados: <span
+                  class="text-black font-medium block sm:inline text-2xl sm:text-base"
+                  id="taxes">$0.0</span></h2>
             </div>
           </div>
         </div>
@@ -298,9 +274,10 @@
     </main>
   </div>
 </div>
-<a href="https://github.com/adielhercules/aguinaldosv"><img width="149" height="149"
-                                                            src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
-                                                            class="attachment-full size-full" alt="Fork me on GitHub"
-                                                            data-recalc-dims="1"></a>
+<a href="https://github.com/adielhercules/aguinaldosv">
+  <img width="149" height="149"
+       src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+       class="fixed top-0 right-0" alt="Fork me on GitHub"
+       data-recalc-dims="1"></a>
 </body>
 </html>
