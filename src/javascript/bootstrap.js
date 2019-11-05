@@ -1,3 +1,5 @@
+import animateScrollTo from 'animated-scroll-to';
+
 import currency from './currency';
 import Calculator from './Calculator';
 import { TIME_OF_EMPLOYMENT_MONTHS } from './constants';
@@ -14,7 +16,15 @@ function animateSubmitButton() {
 
   submitBtnAnimationTimer = setTimeout(() => {
     resultsContainer.classList.remove('animated', 'tada');
-  }, 300);
+  }, 800);
+}
+
+function cloneSnowflakes(parent) {
+  const snowflake = parent.children[0];
+
+  [...Array(11)].forEach(() => {
+    parent.appendChild(snowflake.cloneNode(true));
+  });
 }
 
 function initialize() {
@@ -47,16 +57,20 @@ function initialize() {
     }
 
     if (emptySalary) {
-      salaryField.focus();
+      animateScrollTo(salaryField, { verticalOffset: -80 }).then(() => salaryField.focus());
       return;
     }
 
     if (emptyTimeOfEmployment) {
-      timeOfEmploymentField.focus();
+      animateScrollTo(timeOfEmploymentField, { verticalOffset: -80 }).then(() =>
+        timeOfEmploymentField.focus(),
+      );
       return;
     }
 
-    snowflakes.classList.remove('hidden');
+    alert.classList.add('hidden');
+    snowflakes.classList.remove('invisible');
+    snowflakes.classList.add('animated', 'fadeIn');
 
     const timeOfEmploymentMultiplier = timeOfEmploymentUnit === TIME_OF_EMPLOYMENT_MONTHS ? 1 : 12;
     const timeOfEmploymentAsNumber = Number(timeOfEmployment);
@@ -70,6 +84,8 @@ function initialize() {
 
     animateSubmitButton();
 
+    animateScrollTo(submitBtn, { verticalOffset: 25 });
+
     result.innerHTML = currency(aguinaldo).replace(/\$/g, '');
     taxes.innerHTML = currency(totalTaxes);
   }
@@ -82,6 +98,8 @@ function initialize() {
   timeOfEmploymentField.addEventListener('change', onChange);
   salaryField.addEventListener('change', onChange);
   submitBtn.addEventListener('click', onSubmit);
+
+  cloneSnowflakes(snowflakes);
 }
 
 export default () => {

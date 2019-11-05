@@ -16,15 +16,15 @@ module.exports = {
         '.tree-1': {
           position: 'absolute',
           bottom: 200,
-          right: 30,
+          right: 5,
           transform: 'scale(0.5)',
           transformOrigin: 'center right',
         },
         '.tree-2': {
           position: 'absolute',
-          bottom: 40,
-          right: -80,
-          transform: 'scale(0.7)',
+          bottom: 75,
+          right: 0,
+          transform: 'scale(0.5)',
           transformOrigin: 'bottom right',
         },
         '.tree-3': {
