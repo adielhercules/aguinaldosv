@@ -57,12 +57,12 @@
     user-select: none;
     cursor: default;
     -webkit-animation-name: snowflakes-fall, snowflakes-shake;
-    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-duration: 6s, 3s;
     -webkit-animation-timing-function: linear, ease-in-out;
     -webkit-animation-iteration-count: infinite, infinite;
     -webkit-animation-play-state: running, running;
     animation-name: snowflakes-fall, snowflakes-shake;
-    animation-duration: 10s, 3s;
+    animation-duration: 6s, 3s;
     animation-timing-function: linear, ease-in-out;
     animation-iteration-count: infinite, infinite;
     animation-play-state: running, running
